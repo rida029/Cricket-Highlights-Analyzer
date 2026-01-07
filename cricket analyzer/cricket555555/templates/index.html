@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Highlights Analyzer Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <style>
+        :root {
+            --primary: #0A192F;
+            --secondary: #172A45;
+            --accent: #FF6B00;
+            --accent-light: #FF8C42;
+            --text: #F8F9FA;
+            --text-secondary: #ADB5BD;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            overflow-x: hidden;
+            background-color: #050a13;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        /* Background overlay */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(5, 10, 19, 0.9) 0%, rgba(10, 25, 47, 0.95) 100%);
+            z-index: -1;
+        }
+        
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: -2;
+        }
+
+        /* Landing Page */
+        #landing-page {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(47, 44, 44, 0.9)), 
+                        url('https://img.freepik.com/free-vector/green-cricket-sports-background-with-illustration-players-golden-trophy-cup_1302-5494.jpg?semt=ais_hybrid&w=740');
+            background-size: cover;
+            background-position: center;
+            z-index: 2;
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        .landing-content {
+            text-align: center;
+            padding: 3.5rem;
+            background: rgba(5, 10, 19, 0.7);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: -0.5px;
+        }
+
+        .landing-content p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+        }
+
+        .cta-button i {
+            font-size: 1.2rem;
+        }
+
+        .scroll-prompt {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-prompt:hover {
+            opacity: 1;
+            color: var(--accent-light);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-15px) translateX(-50%); }
+            60% { transform: translateY(-7px) translateX(-50%); }
+        }
+
+        /* Main Interface */
+        #main-interface {
+            display: none;
+            min-height: 100vh;
+            padding: 2rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 1;
+            margin-top: 80px;
+            width: 100%;
+        }
+        
+        .input-section {
+            background: rgba(23, 42, 69, 0.85);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .input-header {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .input-header h2 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .input-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
+            outline: none;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ADB5BD' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 12px;
+        }
+
+        select option {
+            color: black;
+            background-color: white;
+        }
+
+        select:invalid {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 107, 0, 0.4);
+            background: linear-gradient(45deg, var(--accent-light), var(--accent));
+        }
+
+        .results-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(23, 42, 69, 0.85);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .frame-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .frame-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .frame-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .frame-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 107, 0, 0.3);
+        }
+
+        .frame-card:hover::before {
+            opacity: 1;
+        }
+
+        .frame-card img {
+            width: 100%;
+            display: block;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .frame-info {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .frame-label {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .frame-label i {
+            font-size: 14px;
+        }
+
+        .frame-time {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .frame-confidence {
+            font-size: 13px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 6px 10px;
+            border-radius: 20px;
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        .highlight-video {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 12px;
+            background: #000;
+            display: block;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .charts {
+            margin-top: 40px;
+            display: none;
+            background: rgba(23, 42, 69, 0.85);
+            padding: 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .chart-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-title {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .loading {
+            color: var(--accent);
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 107, 0, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--accent);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading::after {
+            content: '';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 107, 0, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #ff6b6b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .confidence-meter {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .confidence-level {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, var(--accent));
+            border-radius: 3px;
+        }
+
+        .section-title {
+            margin: 25px 0 20px;
+            color: var(--accent);
+            font-size: 1.6rem;
+            border-bottom: 2px solid rgba(255, 107, 0, 0.3);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.4rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .model-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .model-btn {
+            padding: 0.8rem 1.8rem;
+            background: rgba(255, 107, 0, 0.1);
+            color: var(--text);
+            border: 1px solid var(--accent);
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .model-btn i {
+            font-size: 1rem;
+        }
+
+        .model-btn.active {
+            background: linear-gradient(45deg, var(--accent), var(--accent-light));
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+        }
+
+        .model-btn:hover {
+            background: rgba(255, 107, 0, 0.3);
+        }
+
+        .accuracy-info {
+            background: rgba(255, 107, 0, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .accuracy-info h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .accuracy-info h3 i {
+            font-size: 1.2rem;
+        }
+
+        .accuracy-info p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .accuracy-info strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Floating cricket elements */
+        .cricket-element {
+            position: fixed;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .cricket-ball {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn-icons-png.flaticon.com/512/47/47015.png') no-repeat center center;
+            background-size: contain;
+        }
+
+        .cricket-bat {
+            width: 150px;
+            height: 150px;
+            background: url('https://cdn-icons-png.flaticon.com/512/3129/3129428.png') no-repeat center center;
+            background-size: contain;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .container {
+                max-width: 95%;
+            }
+            
+            .frame-group {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .landing-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .input-section, .results-section, .charts {
+                padding: 1.5rem;
+            }
+            
+            .model-selector {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .model-selector {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .model-btn {
+                justify-content: center;
+            }
+            
+            .frame-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="bg-overlay"></div>
+    <div class="bg-pattern"></div>
+    
+    <!-- Floating cricket elements -->
+    <div class="cricket-element cricket-ball" style="top: 20%; left: 10%;"></div>
+    <div class="cricket-element cricket-bat" style="bottom: 15%; right: 8%; transform: rotate(45deg);"></div>
+    
+    <!-- Landing Page -->
+    <section id="landing-page">
+        <div class="landing-content">
+            <h1>Cricket Highlights Analyzer Pro</h1>
+            <p>AI-powered analysis of cricket matches with ML-enhanced accuracy. Extract key moments, player statistics, and game-changing events automatically.</p>
+            <button class="cta-button" onclick="showMainInterface()">
+                <i class="fas fa-play"></i> Get Started
+            </button>
+            <div class="scroll-prompt" onclick="showMainInterface()">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Interface -->
+    <section id="main-interface">
+        <div class="container">
+            <div class="input-section">
+                <div class="input-header">
+                    <h2><i class="fas fa-cricket"></i> Cricket Highlights Analyzer</h2>
+                    <p>Select a model and enter YouTube URL to analyze cricket highlights</p>
+                </div>
+                
+                <div class="model-selector">
+                    <button class="model-btn active" onclick="selectModel('svm')">
+                        <i class="fas fa-project-diagram"></i> SVM Model
+                    </button>
+                    <button class="model-btn" onclick="selectModel('ann')">
+                        <i class="fas fa-brain"></i> ANN Model
+                    </button>
+                    <button class="model-btn" onclick="selectModel('hybrid')">
+                        <i class="fas fa-robot"></i> Hybrid Model
+                    </button>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="url" placeholder="Paste YouTube URL here (e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ)">
+                    <select id="event">
+                        <option value="" disabled selected>Select event type to analyze</option>
+                        <option value="sixes"><i class="fas fa-bolt"></i> Sixes</option>
+                        <option value="fours"><i class="fas fa-running"></i> Fours</option>
+                        <option value="wickets"><i class="fas fa-skull"></i> Wickets</option>
+                        <option value="run rate"><i class="fas fa-tachometer-alt"></i> Run Rates</option>
+                        <option value="over"><i class="fas fa-stopwatch"></i> Over</option>
+                        <option value="toss"><i class="fas fa-coins"></i> Toss moments</option>
+                        <option value="milestones"><i class="fas fa-trophy"></i> Milestones</option>
+                        <option value="won"><i class="fas fa-flag"></i> Winning moments</option>
+                        <option value="player_info"><i class="fas fa-user"></i> Player Info</option>
+                        <option value="highlights"><i class="fas fa-star"></i> All Highlights</option>
+                    </select>
+                    <button onclick="submitForm()">
+                        <i class="fas fa-search"></i> Analyze Video
+                    </button>
+                </div>
+            </div>
+
+            <div id="results" class="results-section" aria-live="polite"></div>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <button onclick="toggleCharts()" id="chartToggleBtn" class="chart-toggle-btn">
+                    <i class="fas fa-chart-line"></i> Show Advanced Analysis
+                </button>
+            </div>
+            
+            <div class="charts" id="chartSection">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-pie"></i> Advanced Analysis
+                </h2>
+                <div id="accuracyInfo" class="accuracy-info" style="display: none;">
+                    <h3><i class="fas fa-tachometer-alt"></i> Model Performance</h3>
+                    <p id="accuracyText">Loading accuracy data...</p>
+                </div>
+                <div class="chart-grid">
+                    <div class="chart-card">
+                        <canvas id="barChart"></canvas>
+                        <div class="chart-title">Event Frequency</div>
+                    </div>
+                    <div class="chart-card">
+                        <canvas id="pieChart"></canvas>
+                        <div class="chart-title">Event Distribution</div>
+                    </div>
+                    <div class="chart-card">
+                        <canvas id="lineChart"></canvas>
+                        <div class="chart-title">Event Timeline</div>
+                    </div>
+                    <div class="chart-card">
+                        <canvas id="accuracyChart"></canvas>
+                        <div class="chart-title">Model Accuracy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Landing page transition
+        function showMainInterface() {
+            document.getElementById('landing-page').style.opacity = '0';
+            document.getElementById('landing-page').style.pointerEvents = 'none';
+            document.getElementById('main-interface').style.display = 'block';
+            
+            setTimeout(() => {
+                document.querySelector('.container').style.opacity = '1';
+                document.querySelector('.container').style.transform = 'translateY(0)';
+            }, 100);
+            
+            // Add floating cricket elements animation
+            animateCricketElements();
+        }
+
+        // Animate floating cricket elements
+        function animateCricketElements() {
+            const elements = document.querySelectorAll('.cricket-element');
+            elements.forEach(el => {
+                const duration = Math.random() * 20 + 20;
+                const delay = Math.random() * 5;
+                const xMovement = (Math.random() - 0.5) * 100;
+                const yMovement = (Math.random() - 0.5) * 100;
+                
+                el.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+                el.style.setProperty('--x-movement', `${xMovement}px`);
+                el.style.setProperty('--y-movement', `${yMovement}px`);
+            });
+        }
+
+        // Add floating animation to CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                50% { transform: translate(var(--x-movement), var(--y-movement)) rotate(10deg); }
+                100% { transform: translate(0, 0) rotate(0deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Chart instances
+        let barChartInstance = null;
+        let pieChartInstance = null;
+        let lineChartInstance = null;
+        let accuracyChartInstance = null;
+        let currentData = null;
+        let currentModel = 'svm';
+
+        // Model selection
+        function selectModel(model) {
+            currentModel = model;
+            document.querySelectorAll('.model-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Form submission
+        async function submitForm() {
+            const url = document.getElementById("url").value;
+            const event = document.getElementById("event").value;
+            const resultDiv = document.getElementById("results");
+            
+            if (!url || !event) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        Please provide both URL and event type
+                    </div>`;
+                return;
+            }
+            
+            // Validate YouTube URL
+            if (!url.match(/^(https?\:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/)) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        Please enter a valid YouTube URL
+                    </div>`;
+                return;
+            }
+            
+            resultDiv.innerHTML = `
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    Processing with ${currentModel.toUpperCase()} model<span aria-hidden="true"></span>
+                </div>`;
+                
+            document.getElementById('chartToggleBtn').disabled = true;
+
+            try {
+                const response = await fetch("/process", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ url, event, model: currentModel }),
+                });
+
+                const data = await response.json();
+                currentData = data;
+                resultDiv.innerHTML = "";
+
+                if (data.error) {
+                    resultDiv.innerHTML = `
+                        <div class="error">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Error: ${data.error}
+                        </div>`;
+                    return;
+                }
+
+                // Display highlights
+                const highlightGroups = data.highlights;
+                let hasResults = false;
+                
+                for (const [category, items] of Object.entries(highlightGroups)) {
+                    if (items.length > 0) {
+                        hasResults = true;
+                        const iconMap = {
+                            'sixes': 'fa-bolt',
+                            'fours': 'fa-running',
+                            'wickets': 'fa-skull',
+                            'run rate': 'fa-tachometer-alt',
+                            'over': 'fa-stopwatch',
+                            'toss': 'fa-coins',
+                            'milestones': 'fa-trophy',
+                            'won': 'fa-flag',
+                            'player_info': 'fa-user',
+                            'highlights': 'fa-star'
+                        };
+                        
+                        const icon = iconMap[category.toLowerCase()] || 'fa-circle';
+                        
+                        resultDiv.innerHTML += `
+                            <h2 class="section-title">
+                                <i class="fas ${icon}"></i>
+                                ${category.toUpperCase()} (${items.length})
+                            </h2>`;
+                            
+                        const frameGroup = document.createElement("div");
+                        frameGroup.className = "frame-group";
+
+                        items.forEach(h => {
+                            const confidencePercent = Math.round(h.confidence * 100);
+                            const confidenceColor = confidencePercent > 80 ? '#00D4FF' : 
+                                                 confidencePercent > 60 ? '#FFD700' : '#FF6B6B';
+                            
+                            const frameCard = `
+                                <div class="frame-card">
+                                    <img src="${h.image_url}" alt="${h.label} Frame">
+                                    <div class="frame-info">
+                                        <span class="frame-label">
+                                            <i class="fas fa-tag"></i>
+                                            ${h.label}
+                                        </span>
+                                        <span class="frame-time">
+                                            <i class="far fa-clock"></i>
+                                            @ ${h.timestamp}
+                                        </span>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span class="frame-confidence" style="color: ${confidenceColor}">
+                                                <i class="fas fa-chart-line"></i>
+                                                AI Confidence: ${confidencePercent}%
+                                            </span>
+                                            <div class="confidence-meter">
+                                                <div class="confidence-level" style="width: ${confidencePercent}%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                            frameGroup.innerHTML += frameCard;
+                        });
+
+                        resultDiv.appendChild(frameGroup);
+                    }
+                }
+
+                if (!hasResults) {
+                    resultDiv.innerHTML = `<p class="no-results">No highlights found for this event type. Try another option.</p>`;
+                }
+
+                // Display highlight video if available
+                if (data.video_url) {
+                    resultDiv.innerHTML += `
+                        <h2 class="section-title" style="text-align: center;">
+                            <i class="fas fa-video"></i>
+                            Combined Highlight Video
+                        </h2>
+                        <video class="highlight-video" controls>
+                            <source src="${data.video_url}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>`;
+                }
+
+                // Display accuracy info if available
+                if (data.accuracy) {
+                    const accuracyInfo = document.getElementById('accuracyInfo');
+                    const accuracyText = document.getElementById('accuracyText');
+                    
+                    accuracyInfo.style.display = 'block';
+                    accuracyText.innerHTML = `
+                        <p>
+                            <strong>Current Model:</strong> ${data.model_used.toUpperCase()}<br>
+                            <strong>Precision:</strong> ${(data.accuracy.precision * 100).toFixed(1)}%<br>
+                            <strong>Recall:</strong> ${(data.accuracy.recall * 100).toFixed(1)}%<br>
+                            <strong>F1 Score:</strong> ${(data.accuracy.f1 * 100).toFixed(1)}%<br>
+                            <strong>Overall Accuracy:</strong> ${(data.accuracy.overall * 100).toFixed(1)}%
+                        </p>
+                        <p>
+                            <i class="fas fa-info-circle"></i> 
+                            Higher values indicate better model performance. Precision measures correctness, 
+                            recall measures completeness, and F1 is the balance between them.
+                        </p>
+                    `;
+                }
+
+                // Render charts
+                renderCharts(data.highlights, data.accuracy);
+                
+                // Enable chart toggle button if we have data
+                if (hasResults) {
+                    document.getElementById('chartToggleBtn').disabled = false;
+                }
+                
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Network Error: ${error.message}
+                    </div>`;
+            }
+        }
+
+        // Toggle charts visibility
+        function toggleCharts() {
+            const chartDiv = document.getElementById("chartSection");
+            const btn = document.getElementById("chartToggleBtn");
+            
+            if (chartDiv.style.display === "none") {
+                chartDiv.style.display = "block";
+                btn.innerHTML = '<i class="fas fa-chart-line"></i> Hide Advanced Analysis';
+                // Re-render charts when shown
+                if (currentData) {
+                    renderCharts(currentData.highlights, currentData.accuracy);
+                }
+            } else {
+                chartDiv.style.display = "none";
+                btn.innerHTML = '<i class="fas fa-chart-line"></i> Show Advanced Analysis';
+            }
+        }
+
+        // Render charts
+        function renderCharts(highlights, accuracy) {
+            // Destroy existing charts if they exist
+            if (barChartInstance) barChartInstance.destroy();
+            if (pieChartInstance) pieChartInstance.destroy();
+            if (lineChartInstance) lineChartInstance.destroy();
+            if (accuracyChartInstance) accuracyChartInstance.destroy();
+
+            // Prepare data
+            const eventCounts = {};
+            const eventTimeline = [];
+            
+            for (const [category, items] of Object.entries(highlights)) {
+                if (items.length > 0) {
+                    eventCounts[category] = items.length;
+                    
+                    // Prepare timeline data
+                    items.forEach(item => {
+                        const timeInSec = parseInt(item.timestamp);
+                        eventTimeline.push({
+                            x: timeInSec,
+                            y: category,
+                            label: item.label,
+                            confidence: item.confidence
+                        });
+                    });
+                }
+            }
+
+            // Skip if no data
+            if (Object.keys(eventCounts).length === 0) {
+                document.getElementById("chartSection").style.display = "none";
+                return;
+            }
+
+            const ctxBar = document.getElementById('barChart').getContext('2d');
+            const ctxPie = document.getElementById('pieChart').getContext('2d');
+            const ctxLine = document.getElementById('lineChart').getContext('2d');
+            const ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
+            
+            // Color palette
+            const colors = [
+                '#FF6B00', '#FF8C42', '#FFD166', 
+                '#06D6A0', '#118AB2', '#073B4C',
+                '#EF476F', '#7B2CBF', '#4CC9F0'
+            ];
+
+            // Bar chart
+            barChartInstance = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(eventCounts),
+                    datasets: [{
+                        label: 'Number of Events',
+                        data: Object.values(eventCounts),
+                        backgroundColor: colors.slice(0, Object.keys(eventCounts).length),
+                        borderColor: 'rgba(255, 255, 255, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.raw}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#F8F9FA'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#F8F9FA'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Pie chart
+            pieChartInstance = new Chart(ctxPie, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(eventCounts),
+                    datasets: [{
+                        data: Object.values(eventCounts),
+                        backgroundColor: colors.slice(0, Object.keys(eventCounts).length),
+                        borderColor: 'rgba(255, 255, 255, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#F8F9FA'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#FFF',
+                            formatter: (value, ctx) => {
+                                const total = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                const percentage = Math.round((value / total) * 100);
+                                return percentage > 5 ? `${percentage}%` : '';
+                            }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+
+            // Timeline chart (scatter plot)
+            if (eventTimeline.length > 0) {
+                lineChartInstance = new Chart(ctxLine, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [{
+                            label: 'Events Timeline',
+                            data: eventTimeline,
+                            backgroundColor: colors[0],
+                            borderColor: 'rgba(255, 255, 255, 0.2)',
+                            borderWidth: 1,
+                            pointRadius: 8,
+                            pointHoverRadius: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Time (seconds)',
+                                    color: '#F8F9FA'
+                                },
+                                ticks: {
+                                    color: '#F8F9FA'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Event Type',
+                                    color: '#F8F9FA'
+                                },
+                                ticks: {
+                                    color: '#F8F9FA'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const data = context.raw;
+                                        return [
+                                            `Event: ${data.y}`,
+                                            `Time: ${data.x} sec`,
+                                            `Label: ${data.label}`,
+                                            `Confidence: ${Math.round(data.confidence * 100)}%`
+                                        ];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Accuracy chart (if accuracy data is available)
+            if (accuracy) {
+                accuracyChartInstance = new Chart(ctxAccuracy, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Precision', 'Recall', 'F1 Score', 'Accuracy'],
+                        datasets: [{
+                            label: 'Model Performance',
+                            data: [
+                                accuracy.precision * 100,
+                                accuracy.recall * 100,
+                                accuracy.f1 * 100,
+                                accuracy.overall * 100
+                            ],
+                            backgroundColor: 'rgba(255, 107, 0, 0.2)',
+                            borderColor: '#FF6B00',
+                            pointBackgroundColor: '#FF6B00',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#FF6B00'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                ticks: {
+                                    color: '#F8F9FA',
+                                    backdropColor: 'transparent'
+                                },
+                                pointLabels: {
+                                    color: '#F8F9FA'
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: ${context.raw.toFixed(1)}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize chart toggle button as disabled
+        document.getElementById('chartToggleBtn').disabled = true;
+
+        // Add event listener for Enter key
+        document.getElementById('url').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                submitForm();
+            }
+        });
+
+        // Initialize landing page animation
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelector('.landing-content').style.animation = 'fadeInUp 0.8s forwards';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

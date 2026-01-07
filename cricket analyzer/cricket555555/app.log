@@ -1,0 +1,484 @@
+2025-04-17 00:28:44,852 - INFO - Loading pre-trained models...
+2025-04-17 00:28:44,905 - INFO - Error loading models: [Errno 2] No such file or directory: 'static\\models\\ensemble_model.pkl'. Initializing new models...
+2025-04-17 00:28:44,905 - INFO - Initializing machine learning models...
+2025-04-17 00:28:44,906 - INFO - Training with 10 samples...
+2025-04-17 00:28:44,910 - INFO - Training SVM model...
+2025-04-17 00:28:44,913 - INFO - Training ANN model...
+2025-04-17 00:28:45,317 - INFO - Training Ensemble model...
+2025-04-17 00:28:45,659 - INFO - Model accuracies - SVM: 0.00%, ANN: 0.00%, Ensemble: 0.00%
+2025-04-17 00:28:45,766 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:28:45,782 - WARNING -  * Debugger is active!
+2025-04-17 00:28:45,826 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:28:46,286 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:28:46,289 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:28:48,576 - INFO - Loading pre-trained models...
+2025-04-17 00:28:48,655 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:28:48,707 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 00:28:55,961 - INFO - Loading pre-trained models...
+2025-04-17 00:28:55,995 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:28:56,009 - WARNING -  * Debugger is active!
+2025-04-17 00:28:56,036 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:28:56,532 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:28:56,534 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:29:06,032 - INFO - 192.168.1.4 - - [17/Apr/2025 00:29:06] "GET / HTTP/1.1" 200 -
+2025-04-17 00:29:07,567 - INFO - 192.168.1.4 - - [17/Apr/2025 00:29:07] "GET /static/images/cricket3.jpg HTTP/1.1" 200 -
+2025-04-17 00:29:07,588 - INFO - 192.168.1.4 - - [17/Apr/2025 00:29:07] "GET /static/images/cricket2s.jpg HTTP/1.1" 200 -
+2025-04-17 00:29:07,682 - INFO - 192.168.1.4 - - [17/Apr/2025 00:29:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-17 00:29:36,755 - INFO - Starting processing for URL: https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF
+2025-04-17 00:29:36,756 - INFO - Downloading YouTube video from https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF
+2025-04-17 00:31:38,251 - INFO -  * Detected change in 'C:\\Python\\Lib\\logging\\__init__.py', reloading
+2025-04-17 00:31:38,379 - INFO -  * Detected change in 'C:\\Python\\Lib\\encodings\\cp1252.py', reloading
+2025-04-17 00:31:39,299 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 00:31:38,251 - INFO -  * Detected change in 'C:\\Python\\Lib\\logging\\__init__.py', reloading
+2025-04-17 00:31:48,568 - INFO - Loading pre-trained models...
+2025-04-17 00:31:48,701 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:31:48,721 - WARNING -  * Debugger is active!
+2025-04-17 00:31:48,768 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:31:48,864 - INFO - Loading pre-trained models...
+2025-04-17 00:31:48,896 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:31:48,909 - WARNING -  * Debugger is active!
+2025-04-17 00:31:48,937 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:31:49,431 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:31:49,434 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:31:49,548 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:31:49,552 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:32:11,784 - INFO - 192.168.1.4 - - [17/Apr/2025 00:32:11] "GET / HTTP/1.1" 200 -
+2025-04-17 00:32:20,746 - INFO - 192.168.1.4 - - [17/Apr/2025 00:32:20] "[36mGET /static/images/cricket3.jpg HTTP/1.1[0m" 304 -
+2025-04-17 00:32:20,748 - INFO - 192.168.1.4 - - [17/Apr/2025 00:32:20] "[36mGET /static/images/cricket2s.jpg HTTP/1.1[0m" 304 -
+2025-04-17 00:32:41,468 - INFO - Starting processing for URL: https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF
+2025-04-17 00:32:41,469 - INFO - Downloading YouTube video from https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF
+2025-04-17 00:33:03,555 - INFO - Video info: 25FPS, 9374 frames (~375.0s)
+2025-04-17 00:33:03,556 - INFO - Error processing video: name 'keyword_list' is not defined
+2025-04-17 00:33:03,565 - INFO - 192.168.1.4 - - [17/Apr/2025 00:33:03] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 00:36:47,786 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:36:47,787 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:36:47,788 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:36:47,788 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:36:48,704 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 00:36:55,928 - INFO - Loading pre-trained models...
+2025-04-17 00:36:55,929 - INFO - Loading pre-trained models...
+2025-04-17 00:36:55,968 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:36:55,968 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:36:55,986 - WARNING -  * Debugger is active!
+2025-04-17 00:36:55,987 - WARNING -  * Debugger is active!
+2025-04-17 00:36:56,015 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:36:56,019 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:36:56,425 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:36:56,428 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:36:56,430 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:36:56,431 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:37:08,587 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:37:08,587 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:37:08,588 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:37:08,588 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 00:37:09,906 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 00:37:17,492 - INFO - Loading pre-trained models...
+2025-04-17 00:37:17,495 - INFO - Loading pre-trained models...
+2025-04-17 00:37:17,520 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:37:17,533 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 00:37:17,537 - WARNING -  * Debugger is active!
+2025-04-17 00:37:17,547 - WARNING -  * Debugger is active!
+2025-04-17 00:37:17,560 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:37:17,569 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 00:37:17,952 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:37:17,956 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:37:17,965 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 00:37:17,974 - INFO -  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+2025-04-17 00:37:24,254 - INFO - 192.168.1.4 - - [17/Apr/2025 00:37:24] "GET / HTTP/1.1" 200 -
+2025-04-17 00:37:25,071 - INFO - 192.168.1.4 - - [17/Apr/2025 00:37:25] "[36mGET /static/images/cricket3.jpg HTTP/1.1[0m" 304 -
+2025-04-17 00:37:25,160 - INFO - 192.168.1.4 - - [17/Apr/2025 00:37:25] "[36mGET /static/images/cricket2s.jpg HTTP/1.1[0m" 304 -
+2025-04-17 00:37:38,285 - INFO - Starting processing for URL: https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF
+2025-04-17 00:37:38,287 - INFO - Downloading YouTube video from https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF
+2025-04-17 00:37:50,162 - INFO - Video info: 25FPS, 9374 frames (~375.0s)
+2025-04-17 00:37:50,164 - INFO - Looking for keywords: ['SIX']
+2025-04-17 00:37:50,190 - INFO - Processing frame 0/9374 (0.0s)
+2025-04-17 00:37:53,851 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: Te <a os GD fS.500 | gi
+2025-04-17 00:38:00,636 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: im es oe BE 01ND 40 ® 22) ie Cuma ts
+2025-04-17 00:38:01,738 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: am OE es eae BO On aCe
+2025-04-17 00:38:02,344 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: am OE ees eae Ps: ND 16-0 +1) Banco mamma
+2025-04-17 00:38:02,900 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: am OE Lees eae eoamccmumemema
+2025-04-17 00:38:03,387 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ar er 60 0 + re -
+2025-04-17 00:38:03,977 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: 7 = me aes as ea0000.™ ’ go
+2025-04-17 00:38:04,608 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: fm me es at SC OOCC imal
+2025-04-17 00:38:05,856 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =! we QD W500
+2025-04-17 00:38:07,500 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Se ee es er - |
+2025-04-17 00:38:08,056 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a it ae oe met
+2025-04-17 00:38:08,719 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a it S GRR B30000 rar Mf 7
+2025-04-17 00:38:09,718 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ae it ae) eeg0000 Nn
+2025-04-17 00:38:12,252 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) ~ 7 GRD s..0"° *' @
+2025-04-17 00:38:12,813 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = oh Bee GRD fS8.000°"” me
+2025-04-17 00:38:18,102 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a Be BO0000 8 a!
+2025-04-17 00:38:28,378 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) ow GE “Sw ”"—s TO
+2025-04-17 00:38:30,728 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = om SR nn ”—OoD
+2025-04-17 00:38:34,981 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = re
+2025-04-17 00:38:35,512 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —
+2025-04-17 00:38:35,999 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: at
+2025-04-17 00:38:36,612 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — fossa coe af'n3 ) ' [Ape eee
+2025-04-17 00:38:37,224 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) ew 2 GRD sk00"” xe
+2025-04-17 00:38:37,811 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =) ow oz GED 28500"
+2025-04-17 00:38:38,292 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =) owt GED 228500"
+2025-04-17 00:38:39,320 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: asl owt GD F800"
+2025-04-17 00:38:39,808 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [ere 8 ee
+2025-04-17 00:38:40,281 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: yw GD 280507"
+2025-04-17 00:38:44,025 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: a) ‘Ga IND 75-0 © ™y TOURNAMENT SIXES 1130 30 :
+2025-04-17 00:38:44,057 - INFO - Saved frame: static/highlights\sixes\frame_1236_SIX.jpg
+2025-04-17 00:38:44,058 - INFO - Found sixes at 49.4s (Confidence: 30.43%)
+2025-04-17 00:38:44,844 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: —- iv IND ZS > TOURNAMENT SIXES 1130 gf 30 \e
+2025-04-17 00:38:45,435 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =" ow zy GERD 228000"
+2025-04-17 00:38:46,942 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) ow zy GED 28000°" 1 Ee
+2025-04-17 00:38:50,010 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: = Ne ea ND 150 2 4 aaa
+2025-04-17 00:38:51,109 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) owe ze GD B22 000°""
+2025-04-17 00:38:55,059 - INFO - Processing frame 1500/9374 (60.0s)
+2025-04-17 00:39:03,582 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =f owe GED B23 000""
+2025-04-17 00:39:04,166 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: as KVINO RE > TOURNAMENT SIXES 131, 31 ;
+2025-04-17 00:39:04,182 - INFO - Saved frame: static/highlights\sixes\frame_1692_SIX.jpg
+2025-04-17 00:39:04,183 - INFO - Found sixes at 67.7s (Confidence: 30.43%)
+2025-04-17 00:39:04,795 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: — AVIND 12-0 ® 2. TOURNAMENT SIXES | 131 7
+2025-04-17 00:39:05,298 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: = AK IND 21-0 24Y TOURNAMENT SIXES Jy keh]
+2025-04-17 00:39:05,954 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: - AK IND 21-0 ™4Y TOURNAMENT SIXES he Pd
+2025-04-17 00:39:06,552 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: "20 = TOURNAMENT SIXES Wee PI
+2025-04-17 00:39:07,042 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: a" 20 = Y TOURNAMENT sixes J] 32
+2025-04-17 00:39:07,496 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: PaxvIND 2-0 24Y TOURNAMENT SIXES .
+2025-04-17 00:39:07,972 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ==" ‘Gap OULD 132 same
+2025-04-17 00:39:08,366 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = r Gaines 7 S
+2025-04-17 00:39:09,321 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = Gea Sama oes lk
+2025-04-17 00:39:10,212 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = Gee Cree noeel
+2025-04-17 00:39:12,754 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == rnp 128-0 9 2) CEE ns ose.
+2025-04-17 00:39:13,215 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = Sa Sr» gee
+2025-04-17 00:39:13,690 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = Gee Ses nee lL
+2025-04-17 00:39:14,172 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = Gee ee eco
+2025-04-17 00:39:14,654 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = Se Sr wd Clk
+2025-04-17 00:39:21,109 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = A nai, ERM IND 136-0 2 = me
+2025-04-17 00:39:23,437 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: > en 2 ee
+2025-04-17 00:39:24,796 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == a ca
+2025-04-17 00:39:27,441 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [- RMSE Ae se
+2025-04-17 00:39:27,924 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a |
+2025-04-17 00:39:30,586 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Ry ee . yy
+2025-04-17 00:39:32,834 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =" te GD ei
+2025-04-17 00:39:33,866 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a Ed i, Gee
+2025-04-17 00:39:38,911 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) oe oss GD CY
+2025-04-17 00:39:39,961 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: lm an 2 se ne
+2025-04-17 00:39:40,446 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =! x oe GD CY
+2025-04-17 00:39:41,875 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =! oe ot GD to”
+2025-04-17 00:39:42,359 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: am al Pp IND 71 2 295 ala < |
+2025-04-17 00:39:45,527 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —a 3. we, INDIA
+2025-04-17 00:39:46,009 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —— lc kM
+2025-04-17 00:39:46,943 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: |) i \ a
+2025-04-17 00:39:47,456 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: tle |) a
+2025-04-17 00:39:47,958 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: | |
+2025-04-17 00:39:48,425 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: iOS lC OO tt—‘—C—t—=PFé3
+2025-04-17 00:39:49,454 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —  _. |
+2025-04-17 00:39:49,885 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: \ Ss {|
+2025-04-17 00:39:50,340 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: _  ~ _. |
+2025-04-17 00:39:50,837 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: % CIRM 884. TH Marc HGHLIOHTS AND LATEST NEWS v
+2025-04-17 00:39:52,318 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = €& CMR O81 THE Mares cHLIcHTS AND LATEST NEWS mA
+2025-04-17 00:39:53,246 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == Gta 6 NRCH Honors anowatest news “Y
+2025-04-17 00:39:53,696 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == Ge NRE Honors ano atest news “Y
+2025-04-17 00:39:54,166 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == Gee HE NRTCH HoHtcis ano atest news ae
+2025-04-17 00:39:54,178 - INFO - Processing frame 3000/9374 (120.0s)
+2025-04-17 00:39:54,580 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == Geta NRC Honours ano atest news “Y
+2025-04-17 00:39:55,087 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == Gea HE NRTCH Hontcis ano atest news “Y
+2025-04-17 00:39:55,713 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == (Gea 6° TE NATeH HontciTs ano LaTest News dL.
+2025-04-17 00:39:56,161 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == (Gace 6° TE NaTeH HontciTs ano LaTest news dL.
+2025-04-17 00:39:56,727 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = ‘Gee 1° TENATEH Honors ano LaTest News Ld.
+2025-04-17 00:39:57,218 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: == (Gada 6° Te NaTCH Hontcis ano atest News “Y
+2025-04-17 00:39:57,675 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a Oe ores no atest news 4
+2025-04-17 00:39:58,161 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — Giese IT a
+2025-04-17 00:39:59,897 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = ‘Gua IND 177-1 °2 207 idiaaiaat sina niaaaiialaaaa (
+2025-04-17 00:40:00,462 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a Oreos 0 rest news if
+2025-04-17 00:40:01,395 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = he nan [ono 2074 =: LL ff
+2025-04-17 00:40:02,781 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: fm 2 Gr 88.500
+2025-04-17 00:40:03,770 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =! oe ee GD 50 OY
+2025-04-17 00:40:04,225 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =! oe ee GD 50 OY
+2025-04-17 00:40:04,763 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =! oe ee GQ oo OY
+2025-04-17 00:40:05,263 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =! oe ee GD "50 OY
+2025-04-17 00:40:09,240 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =) x te QED 8.550"
+2025-04-17 00:40:11,224 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: pr me IND 2211 °°”) ee
+2025-04-17 00:40:11,739 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) SC Bt Scene rr
+2025-04-17 00:40:12,314 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) Ce OR Sree er
+2025-04-17 00:40:18,516 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Se: 2 > >
+2025-04-17 00:40:19,088 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: eee > re
+2025-04-17 00:40:22,292 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ait
+2025-04-17 00:40:22,782 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: e ma oe —_— 5 7
+2025-04-17 00:40:23,201 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Sen Cte os ™
+2025-04-17 00:40:23,714 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ————— EEE
+2025-04-17 00:40:24,169 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —— _ — er a
+2025-04-17 00:40:24,647 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ie
+2025-04-17 00:40:25,164 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ro
+2025-04-17 00:40:25,677 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ¢
+2025-04-17 00:40:26,117 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: - 3%
+2025-04-17 00:40:26,549 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: _ 1
+2025-04-17 00:40:27,073 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ran
+2025-04-17 00:40:27,488 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: _ 9%
+2025-04-17 00:40:27,903 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ——.
+2025-04-17 00:40:28,431 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Sa 6) dL O!).hlUTrr
+2025-04-17 00:40:28,941 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: - a a \
+2025-04-17 00:40:30,352 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =! me as QDs oe
+2025-04-17 00:40:32,665 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: >a eee "2 >
+2025-04-17 00:40:33,312 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =! me te GD ot
+2025-04-17 00:40:33,832 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =o mete GD ot OY
+2025-04-17 00:40:34,366 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [> ee 2 >
+2025-04-17 00:40:37,199 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: See Gee 85000°"* | @
+2025-04-17 00:40:37,706 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: See Gee 85000°"* me
+2025-04-17 00:40:38,326 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: 6 eee 2 > ee
+2025-04-17 00:40:47,744 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: i a ee © Yr os Pace IND 276-2): a ”
+2025-04-17 00:40:52,026 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Tie ND ae Bas "ALCATEL = RELIED 029% FY
+2025-04-17 00:40:56,174 - INFO - Processing frame 4500/9374 (180.0s)
+2025-04-17 00:40:56,637 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: _>
+2025-04-17 00:40:57,771 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =F
+2025-04-17 00:40:58,401 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ———— —— SS
+2025-04-17 00:40:59,107 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: . | a “Tt
+2025-04-17 00:40:59,777 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee ae
+2025-04-17 00:41:00,420 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ast —
+2025-04-17 00:41:01,401 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ——— OE ile per
+2025-04-17 00:41:02,026 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —, z= ea ee
+2025-04-17 00:41:02,632 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =! oe mie GED 85000" =
+2025-04-17 00:41:03,210 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —_) recat |
+2025-04-17 00:41:03,913 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a ‘20M meer Ge 226000” Oe ¢ |
+2025-04-17 00:41:04,435 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —— oe Saeco
+2025-04-17 00:41:05,072 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ——oe Sisco
+2025-04-17 00:41:05,763 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: —— oe Wee
+2025-04-17 00:41:08,069 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: => Gi Ge "2 > ee |
+2025-04-17 00:41:09,888 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: Set GD 8".55007"" |
+2025-04-17 00:41:11,080 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — [PacIND 34 9 072) IND 314-4 © 73 een |
+2025-04-17 00:41:11,699 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =D nou Te GD 8800007”” OG < |
+2025-04-17 00:41:18,415 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ae rrrmmmneam IND 314-4 75) <7) Sa |
+2025-04-17 00:41:22,878 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: cf Al. i . ,
+2025-04-17 00:41:23,447 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [ A oe |,
+2025-04-17 00:41:24,016 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [ \ ik | ,
+2025-04-17 00:41:24,539 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Ss ——eellUmUmlmlmltt~C—~”
+2025-04-17 00:41:25,008 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Ss ——eellUmUlmlmttt~C—~
+2025-04-17 00:41:25,586 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: fT UAL
+2025-04-17 00:41:26,138 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: |  ,.,
+2025-04-17 00:41:26,688 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [Le |,
+2025-04-17 00:41:27,237 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [Le |,
+2025-04-17 00:41:27,740 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ~ —r rr! mc eer
+2025-04-17 00:41:29,711 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: . - ~-ou
+2025-04-17 00:41:30,293 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =) oe GD 05007"
+2025-04-17 00:41:30,918 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: =) owe GD 65007"
+2025-04-17 00:41:31,475 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) owe GRD 60007"
+2025-04-17 00:41:32,092 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =) we GRD 6000" —
+2025-04-17 00:41:36,088 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: rm ie aay a GD 800007"" |g
+2025-04-17 00:41:39,727 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = es inva EST pakistan
+2025-04-17 00:41:42,018 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = en ee ee
+2025-04-17 00:41:43,148 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ————--
+2025-04-17 00:41:43,673 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: le oo eae, a
+2025-04-17 00:41:44,215 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee = ae ee ee
+2025-04-17 00:41:44,722 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: CC s—s
+2025-04-17 00:41:45,679 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: === l(a
+2025-04-17 00:41:46,193 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — i —x«@<a—-- i—
+2025-04-17 00:41:47,122 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ra’ oer GR ees ee
+2025-04-17 00:41:53,668 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: aye ae ok 30 © — =
+2025-04-17 00:41:55,100 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a «(|
+2025-04-17 00:41:58,109 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Sdn be ee, et toc. Fb ee
+2025-04-17 00:42:00,556 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: pa
+2025-04-17 00:42:01,092 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — ' aS |
+2025-04-17 00:42:01,624 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — =e '
+2025-04-17 00:42:02,121 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — a '
+2025-04-17 00:42:02,710 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — a '
+2025-04-17 00:42:03,295 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: aaa.” A —e, eo!
+2025-04-17 00:42:03,881 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: -_ — J a]. ) me Oe
+2025-04-17 00:42:04,473 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: > -aer ee =e A) A
+2025-04-17 00:42:04,899 - INFO - Processing frame 6000/9374 (240.0s)
+2025-04-17 00:42:09,671 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: re PAK 29-1 °) 92 aera
+2025-04-17 00:42:10,348 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: beet sme PAK 29-1 °°? chan =
+2025-04-17 00:42:11,001 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Se PAK 29-1 °°? Ghar =
+2025-04-17 00:42:11,478 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Se PAK 29-1 7) 2 Ghaen =
+2025-04-17 00:42:12,059 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Se PAK 29-1 °°? Ghaen =
+2025-04-17 00:42:13,379 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Pee ee ee Oe
+2025-04-17 00:42:15,023 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Gow 2 Geka or UTS
+2025-04-17 00:42:18,665 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a |G” ee
+2025-04-17 00:42:23,297 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: my oe => Ge ww ore
+2025-04-17 00:42:23,920 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: my oe, > GR ww oe ae
+2025-04-17 00:42:24,523 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: go) os « Game oo TSS
+2025-04-17 00:42:25,122 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: goo «« Game oo TSS
+2025-04-17 00:42:26,093 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Go =< GD e000" T=
+2025-04-17 00:42:26,562 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: go! os « Goes 00” ,=
+2025-04-17 00:42:27,037 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: 2 Gen OO 2 > eee
+2025-04-17 00:42:30,297 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Es FT
+2025-04-17 00:42:30,984 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: EE
+2025-04-17 00:42:32,354 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: > oe ww
+2025-04-17 00:42:32,889 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: _— Coke wowegw pero = -
+2025-04-17 00:42:36,932 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: =
+2025-04-17 00:42:37,520 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: , ie 2 ee SS
+2025-04-17 00:42:38,038 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: ‘TOURNAMENT SIXES iy ee
+2025-04-17 00:42:38,056 - INFO - Saved frame: static/highlights\sixes\frame_6768_SIX.jpg
+2025-04-17 00:42:38,058 - INFO - Found sixes at 270.7s (Confidence: 30.43%)
+2025-04-17 00:42:38,575 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: TOURNAMENT SIXES i kc) A=
+2025-04-17 00:42:39,237 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: ae =" ©) TOURNAMENT Sixes ek] Qi
+2025-04-17 00:42:39,887 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: a Wy 8 2" ©) TOURNAMENT SIXES 136. = = =
+2025-04-17 00:42:40,573 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: ae 2" ©) TOURNAMENT Sixes ie 1G
+2025-04-17 00:42:41,293 - INFO - Prediction: sixes (Confidence: 30.43%) | Text: a 2) TOURNAMENTSIXES IR ean
+2025-04-17 00:42:41,996 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: elo == Ga ow oe ae
+2025-04-17 00:42:42,695 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ele == Ga ow oe ae
+2025-04-17 00:42:43,391 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ele == Ga ew oot ae
+2025-04-17 00:42:44,073 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [<I °° PAX 104-1 > 22> CC
+2025-04-17 00:42:55,175 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: myo «= Ga ewe oe ae
+2025-04-17 00:42:55,857 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: mle «= Ga ewe oe ee
+2025-04-17 00:43:00,497 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: awe ll
+2025-04-17 00:43:01,027 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: > “eae
+2025-04-17 00:43:01,434 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: _
+2025-04-17 00:43:01,899 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: S
+2025-04-17 00:43:08,176 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a  @® EBEY
+2025-04-17 00:43:09,290 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ey
+2025-04-17 00:43:09,813 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: 8 4
+2025-04-17 00:43:10,363 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: EB ez
+2025-04-17 00:43:10,954 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ‘Ga = Fe ml
+2025-04-17 00:43:11,516 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ‘Gap PANE . VS v
+2025-04-17 00:43:13,568 - INFO - Processing frame 7500/9374 (300.0s)
+2025-04-17 00:43:14,047 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: . “A
+2025-04-17 00:43:14,575 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: go
+2025-04-17 00:43:15,028 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: .
+2025-04-17 00:43:15,495 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: .
+2025-04-17 00:43:16,378 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: » _
+2025-04-17 00:43:18,588 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: tim a 2a
+2025-04-17 00:43:19,653 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: -—6dlcC( i Ch = ©
+2025-04-17 00:43:20,162 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ww = fC
+2025-04-17 00:43:23,237 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = are TD ooh ee
+2025-04-17 00:43:24,620 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: DP eel cic [00 PAK 29-3 9 «Ee ——
+2025-04-17 00:43:28,480 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [GS °° 2 2 a
+2025-04-17 00:43:29,801 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [cE °° PA 29-4 > a
+2025-04-17 00:43:30,486 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: my ows Ga ee ott Ye
+2025-04-17 00:43:31,224 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: [GE °° 20 >
+2025-04-17 00:43:35,178 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: (ere Ga 200007" ==
+2025-04-17 00:43:35,846 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = ov PAK 129-4 9B 265 ) oe SOC wae leien
+2025-04-17 00:43:37,828 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: 1 res Ga 200087" ==
+2025-04-17 00:43:38,534 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: en "==> Pes
+2025-04-17 00:43:39,864 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a
+2025-04-17 00:43:40,495 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — a eli
+2025-04-17 00:43:41,092 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee se ei me =
+2025-04-17 00:43:41,794 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee
+2025-04-17 00:43:45,731 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a eR ue
+2025-04-17 00:43:47,588 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ey pee Se
+2025-04-17 00:43:48,261 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee SS =—srh— lh i> ST
+2025-04-17 00:43:48,988 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ————— ll
+2025-04-17 00:43:49,597 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: — —_ —-
+2025-04-17 00:43:50,306 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: gs. .. 2 Gee s.07° yo
+2025-04-17 00:44:00,621 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: SS ae
+2025-04-17 00:44:01,254 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: A
+2025-04-17 00:44:01,923 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: = a
+2025-04-17 00:44:02,591 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: <= a o_o
+2025-04-17 00:44:05,123 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: sce ~ io Sel ~~ -
+2025-04-17 00:44:11,915 - INFO - Prediction: wickets (Confidence: 30.75%) | Text: 3 wii AWICKETS REMAINING ie
+2025-04-17 00:44:13,071 - INFO - Prediction: wickets (Confidence: 30.75%) | Text: ‘ wi AWICKETS REMAINING i
+2025-04-17 00:44:14,156 - INFO - Prediction: wickets (Confidence: 30.75%) | Text: wer 4 WICKETS REMAINING _ zu tr eo
+2025-04-17 00:44:14,722 - INFO - Prediction: wickets (Confidence: 30.75%) | Text: wr 4 WICKETS REMAINING _ <a a a
+2025-04-17 00:44:15,282 - INFO - Prediction: wickets (Confidence: 30.75%) | Text: \ wr 4 WICKETS REMAINING _ <a a a
+2025-04-17 00:44:15,818 - INFO - Prediction: wickets (Confidence: 30.75%) | Text: \ Rut 4 WICKETS REMAINING <a a oo
+2025-04-17 00:44:26,950 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee eo =
+2025-04-17 00:44:27,898 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: glo, “= GRD e500" I=
+2025-04-17 00:44:28,358 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: glo“, “- GRD e500" t=
+2025-04-17 00:44:28,371 - INFO - Processing frame 9000/9374 (360.0s)
+2025-04-17 00:44:29,308 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: glo, “> GRD e500" l=
+2025-04-17 00:44:29,794 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: glo“, “> GRaRRD e500" T=
+2025-04-17 00:44:30,269 - INFO - Prediction: milestones (Confidence: 20.43%) | Text: glo, “= GRD e500" l=
+2025-04-17 00:44:34,940 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: gw’ ow. “= Geer wri Ye
+2025-04-17 00:44:35,470 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Lp, le «| GD oo000 "i ae
+2025-04-17 00:44:35,938 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ile «| GD oo000"” i ae
+2025-04-17 00:44:38,946 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Eee ee - .
+2025-04-17 00:44:39,757 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ee. =
+2025-04-17 00:44:40,278 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: ET --NIEi
+2025-04-17 00:44:40,857 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a ee dl (le
+2025-04-17 00:44:41,391 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: a ee dl ale
+2025-04-17 00:44:41,953 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: J ee vl aes
+2025-04-17 00:44:42,842 - INFO - Prediction: wickets (Confidence: 20.37%) | Text: Sy eer amy, ee ale
+2025-04-17 00:44:42,858 - INFO - Finished processing. Found 3 events.
+2025-04-17 00:44:42,859 - INFO - Generating highlight video...
+2025-04-17 00:44:42,860 - INFO - Creating highlight video from 3 events...
+2025-04-17 00:44:44,256 - INFO - Concatenating clips...
+2025-04-17 00:44:44,524 - INFO - Writing final video to static\highlight.mp4...
+2025-04-17 00:44:51,200 - INFO - Highlight video created successfully
+2025-04-17 00:44:51,231 - INFO - Generating analysis charts...
+2025-04-17 00:44:51,232 - INFO - Generating charts for 1 event types...
+2025-04-17 00:44:52,822 - INFO - Charts generated successfully
+2025-04-17 00:44:52,823 - INFO - Processing completed successfully
+2025-04-17 00:44:52,825 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:52] "POST /process HTTP/1.1" 200 -
+2025-04-17 00:44:53,269 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:53] "GET /static/highlights/sixes/frame_1236_SIX.jpg HTTP/1.1" 200 -
+2025-04-17 00:44:53,280 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:53] "GET /static/highlights/sixes/frame_1692_SIX.jpg HTTP/1.1" 200 -
+2025-04-17 00:44:53,298 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:53] "[35m[1mGET /static/highlight.mp4?t=1744830892 HTTP/1.1[0m" 206 -
+2025-04-17 00:44:53,301 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:53] "GET /static/highlights/sixes/frame_6768_SIX.jpg HTTP/1.1" 200 -
+2025-04-17 00:44:53,445 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:53] "[35m[1mGET /static/highlight.mp4?t=1744830892 HTTP/1.1[0m" 206 -
+2025-04-17 00:44:53,518 - INFO - 192.168.1.4 - - [17/Apr/2025 00:44:53] "[35m[1mGET /static/highlight.mp4?t=1744830892 HTTP/1.1[0m" 206 -
+2025-04-17 19:42:08,625 - INFO - Loading pre-trained models...
+2025-04-17 19:42:08,794 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 19:42:08,819 - WARNING -  * Debugger is active!
+2025-04-17 19:42:08,848 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 19:42:21,106 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 19:42:21,113 - INFO -  * Running on http://192.168.1.3:5000/ (Press CTRL+C to quit)
+2025-04-17 19:42:21,579 - INFO - 127.0.0.1 - - [17/Apr/2025 19:42:21] "GET / HTTP/1.1" 200 -
+2025-04-17 19:42:22,185 - INFO - 127.0.0.1 - - [17/Apr/2025 19:42:22] "[36mGET /static/images/cricket3.jpg HTTP/1.1[0m" 304 -
+2025-04-17 19:42:22,185 - INFO - 127.0.0.1 - - [17/Apr/2025 19:42:22] "[36mGET /static/images/cricket2s.jpg HTTP/1.1[0m" 304 -
+2025-04-17 19:42:27,973 - INFO - 192.168.1.3 - - [17/Apr/2025 19:42:27] "GET / HTTP/1.1" 200 -
+2025-04-17 19:42:28,565 - INFO - 192.168.1.3 - - [17/Apr/2025 19:42:28] "GET /static/images/cricket3.jpg HTTP/1.1" 200 -
+2025-04-17 19:42:28,575 - INFO - 192.168.1.3 - - [17/Apr/2025 19:42:28] "GET /static/images/cricket2s.jpg HTTP/1.1" 200 -
+2025-04-17 19:42:28,712 - INFO - 192.168.1.3 - - [17/Apr/2025 19:42:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-17 19:43:03,767 - INFO - Starting processing for URL: https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF 
+2025-04-17 19:43:03,768 - INFO - Downloading YouTube video from https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF 
+2025-04-17 19:43:17,215 - INFO -  * Detected change in 'C:\\Python\\Lib\\logging\\__init__.py', reloading
+2025-04-17 19:43:18,466 - INFO -  * Detected change in 'C:\\Python\\Lib\\encodings\\cp1252.py', reloading
+2025-04-17 19:43:18,479 - INFO -  * Detected change in 'C:\\Python\\Lib\\site-packages\\flask\\app.py', reloading
+2025-04-17 19:43:18,481 - INFO -  * Detected change in 'C:\\Python\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+2025-04-17 19:43:18,483 - INFO -  * Detected change in 'C:\\Python\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+2025-04-17 19:43:18,486 - INFO -  * Detected change in 'C:\\Python\\Lib\\http\\server.py', reloading
+2025-04-17 19:43:18,487 - INFO -  * Detected change in 'C:\\Python\\Lib\\socketserver.py', reloading
+2025-04-17 19:43:18,488 - INFO -  * Detected change in 'C:\\Python\\Lib\\threading.py', reloading
+2025-04-17 19:43:18,516 - INFO - Video info: 25FPS, 9374 frames (~375.0s)
+2025-04-17 19:43:18,517 - INFO - Error processing video: name 'keyword_list' is not defined
+2025-04-17 19:43:18,526 - INFO - 192.168.1.3 - - [17/Apr/2025 19:43:18] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 19:43:24,814 - INFO - Loading pre-trained models...
+2025-04-17 19:43:24,837 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 19:43:24,851 - WARNING -  * Debugger is active!
+2025-04-17 19:43:24,872 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 19:43:26,974 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 19:43:26,979 - INFO -  * Running on http://192.168.1.3:5000/ (Press CTRL+C to quit)
+2025-04-17 19:46:22,750 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 19:46:22,752 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 19:46:22,841 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:04:28,252 - INFO - Loading pre-trained models...
+2025-04-17 20:04:28,277 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 20:04:28,312 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 20:04:34,419 - INFO - Loading pre-trained models...
+2025-04-17 20:04:34,452 - INFO - Starting Cricket Highlights Analyzer Pro...
+2025-04-17 20:04:34,461 - WARNING -  * Debugger is active!
+2025-04-17 20:04:34,475 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 20:04:46,738 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-17 20:04:46,743 - INFO -  * Running on http://192.168.1.3:5000/ (Press CTRL+C to quit)
+2025-04-17 20:04:53,126 - INFO - 192.168.1.3 - - [17/Apr/2025 20:04:53] "GET / HTTP/1.1" 200 -
+2025-04-17 20:04:53,579 - INFO - 192.168.1.3 - - [17/Apr/2025 20:04:53] "[36mGET /static/images/cricket2s.jpg HTTP/1.1[0m" 304 -
+2025-04-17 20:04:53,579 - INFO - 192.168.1.3 - - [17/Apr/2025 20:04:53] "[36mGET /static/images/cricket3.jpg HTTP/1.1[0m" 304 -
+2025-04-17 20:05:07,877 - INFO - Starting processing for URL: https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF 
+2025-04-17 20:05:07,878 - INFO - Downloading YouTube video from https://youtu.be/AFEZzf9_EHk?si=9GzWnAB2Fu2C3KFF 
+2025-04-17 20:05:20,878 - INFO - Video info: 25FPS, 9374 frames (~375.0s)
+2025-04-17 20:05:20,880 - INFO - Error processing video: name 'keyword_list' is not defined
+2025-04-17 20:05:20,888 - INFO - 192.168.1.3 - - [17/Apr/2025 20:05:20] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 20:06:00,790 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:06:00,792 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:06:00,859 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:06:01,802 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 20:09:06,014 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 20:09:11,113 - WARNING -  * Debugger is active!
+2025-04-17 20:09:11,131 - INFO -  * Debugger PIN: 111-678-640
+2025-04-17 20:09:11,411 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-04-17 20:09:14,277 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:14] "GET / HTTP/1.1" 200 -
+2025-04-17 20:09:15,034 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:15] "[36mGET /static/images/cricket2s.jpg HTTP/1.1[0m" 304 -
+2025-04-17 20:09:15,035 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:15] "[36mGET /static/images/cricket3.jpg HTTP/1.1[0m" 304 -
+2025-04-17 20:09:23,011 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:23] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 20:09:28,779 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:28] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 20:09:31,466 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:31] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 20:09:32,229 - INFO - 127.0.0.1 - - [17/Apr/2025 20:09:32] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-04-17 20:11:53,162 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:11:53,164 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:11:53,165 - INFO -  * Detected change in 'D:\\CRICKET6\\cricket555555\\app.py', reloading
+2025-04-17 20:11:54,432 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-17 20:20:34,563 - INFO -  * Restarting with watchdog (windowsapi)
